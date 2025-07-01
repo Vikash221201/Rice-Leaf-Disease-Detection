@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static\rice-logo.jpg" alt="Rice Disease Detection Logo" class="logo">
+            <h1>Rice Disease Detection</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}"><strong>Home</strong></a></li>
+                <li class="dropdown">
+                    <a href="#dropdown"><strong>Dataset &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="static\dataset-20250307T125636Z-001.zip" download><strong>Dataset 1</strong></a></li>
+                        
+                        <li ><a href="static\train.rar" download><strong>Dataset 2</strong></a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="{{ url_for('home') }}"><strong>Models &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="{{ url_for('model_page') }}"><strong>Custom Model</strong></a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('publications') }}"><strong>Publications</strong></a></li>
+
+                <li><a href="{{ url_for('Team_members') }}"><strong>Team Members</strong></a></li>
+
+                <li><a href="{{ url_for('Contact_us') }}"><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!--<img src="static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">-->
+
+        <div class="hero">
+            <h1>Design and Development of Deep Learning Model for Rice Disease Detection using CNN Architecture</h1>
+        </div>
+    
+        <!--<img src="static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">-->
+<div class="heading">
+    <h1>Brown Spot</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\brown_spot.jpg" alt="Monument Valley" class="background-image" >
+        
+            <p>Brown spot of rice is a fungal disease caused by Bipolaris oryzae. It appears as small,
+                 circular to oval brown lesions with a gray or tan center and dark brown margins on leaves, sheaths, and sometimes grains. 
+                 The disease thrives in warm, humid conditions, especially when rice plants are under stress from nutrient deficiency, drought, or poor drainage. 
+                 Severe infections reduce photosynthetic area, leading to yield loss and poor grain quality. Effective management includes using resistant varieties, balanced fertilization (especially with potassium and nitrogen), crop rotation, and fungicide application when necessary. Maintaining field hygiene and removing infected debris also helps control the disease.</p>
+            
+        </div>
+<div class="heading">
+    <h1>Bacterial leaf blight</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\bacterial_leaf_blight.png" alt="Monument Valley" class="background-image" >
+        
+            <p>Bacterial leaf blight (BLB) of rice is a destructive disease caused by Xanthomonas oryzae pv. oryzae. It begins as water-soaked, yellowish lesions on leaf tips or margins that spread downward, eventually turning brown and dry. The disease spreads through wind, rain, irrigation water, and infected seeds, thriving in warm, humid conditions. Severe infections can cause significant yield loss due to reduced photosynthesis and early drying of leaves. Effective management includes growing resistant varieties, using clean seeds, maintaining proper field sanitation, avoiding excess nitrogen fertilizer, and ensuring good water management. Copper-based bactericides may help in reducing disease severity when applied early.</p>
+            
+        </div>
+<div class="heading">
+    <h1>Healthy</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\healthy.png" alt="Monument Valley" class="background-image" >
+        
+            <p>A healthy rice leaf is vibrant green, upright, and free from spots, lesions, or discoloration. It has a smooth texture and uniform coloration, indicating proper chlorophyll levels essential for photosynthesis. Healthy leaves show no signs of pests or disease and are firm without curling or wilting. They play a crucial role in plant growth by converting sunlight into energy, contributing to strong tiller development and high grain yield. Proper nutrient balance, adequate water management, and good field hygiene help maintain leaf health. Timely monitoring and integrated pest management are also essential to ensure leaves remain healthy throughout the growing season.</p>
+            
+        </div>
+        <div class="heading">
+    <h1>Hispa</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\hispa.png" alt="Monument Valley" class="background-image" >
+        
+            <p>Hispa in rice, caused by the insect Dicladispa armigera, damages leaves by feeding on green tissue. Adults scrape the upper leaf surface, while larvae mine inside, causing white parallel streaks. Severe infestations lead to reduced photosynthesis and stunted growth. Control includes timely spraying of insecticides and maintaining field sanitation.</p>
+            
+        </div>
+        <div class="heading">
+    <h1>Leaf Blast</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\leaf_blast.jpg " alt="Monument Valley" class="background-image" >
+        
+            <p>Leaf blast in rice, caused by the fungus Magnaporthe oryzae, appears as diamond-shaped lesions with gray centers and brown margins on leaves. It thrives in warm, humid conditions and dense planting. The disease reduces photosynthesis and yield. Management includes resistant varieties, balanced fertilization, proper spacing, and timely fungicide application.</p>
+            
+        </div>
+        <div class="heading">
+    <h1>Leaf smut</h1>
+</div>
+        <div class="about-rice">
+            <img src="static\leaf_smut.jpg" alt="Monument Valley" class="background-image" >
+        
+            <p>Leaf smut of rice, caused by the fungus Entyloma oryzae, appears as narrow, dark brown to black streaks or blotches on older leaves. It usually occurs under humid conditions and affects poorly nourished plants. Though less damaging than other diseases, management includes balanced fertilization, field sanitation, and growing resistant varieties.</p>
+            
+        </div>
+
+
+
+     <!-- how our project works -->
+
+ <div class="container">
+   <div class="header">How Our Model Works</div>
+    <div class="steps-wrapper">
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/100/leaf.png" alt="Take a picture">
+        <div class="step-text">Take a<br>picture</div>
+      </div>
+
+      <div class="arrow">➔</div>
+
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/100/smartphone.png" alt="See diagnosis">
+        <div class="step-text">See<br>diagnosis</div>
+      </div>
+
+      <div class="arrow">➔</div>
+
+      <div class="step">
+        <img src="static\mortar.png"  alt="Get medicine">
+        <div class="step-text">Get<br>medicine</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+        <div id="about" class="section about">
+            <h2>About the Project</h2>
+            <p>
+                This project uses Convolutional Neural Networks (CNN) to detect rice leaf diseases. 
+                Early detection of diseases like Bacterial Leaf Blight, Brown Spot, and Smut helps farmers 
+                take preventive measures, improving yield and quality.
+            </p>
+        </div>
+    
+        <div id="how-it-works" class="section how-it-works">
+            <h2>How It Works</h2>
+            <p>
+                1️⃣ **Upload an Image** of a rice leaf.<br>
+                2️⃣ Our **CNN-based deep learning model** analyzes the image.<br>
+                3️⃣ The system **classifies the disease** and provides recommendations.<br>
+                4️⃣ Farmers can take **preventive measures** based on results.
+            </p>
+        </div>
+    </main>
+    
+    <script src="nav.js"></script>
+</body>
+</html>

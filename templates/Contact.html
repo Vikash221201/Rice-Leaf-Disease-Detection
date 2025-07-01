@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Contact.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Rice Disease Detection</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}"><strong>Home</strong></a></li>
+                <li class="dropdown">
+                    <a href="#dropdown"><strong>Dataset &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="static\dataset-20250307T125636Z-001.zip" download><strong>Dataset 1</strong></a></li>
+                        
+                        <li ><a href="static\train.rar" download><strong>Dataset 2</strong></a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href=""><strong>Models &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="{{ url_for('model_page') }}"><strong>Custom Model</strong></a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('publications') }}"><strong>Publications</strong></a></li>
+                <li><a href="{{ url_for('Team_members') }}"><strong>Team Members</strong></a></li>
+                <li><a href=""><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="container">
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p>Feel free to use the form or drop us an email. Old-fashioned phone calls work too.</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 9875564348</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> saddlepoint84430@gmail.com or</p>
+            <p><i class="fas fa-envelope"></i> <strong></strong> sayanbanerjee3112@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong>Brainware Uiniversity , Barasat, Kolkata, West Bengal 700125</p>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <label for="first-name">Name</label>
+                <div class="name-fields">
+                    <input type="text" id="first-name" placeholder="First" required>
+                    <input type="text" id="first-name" placeholder="Middle" required>
+                    <input type="text" id="last-name" placeholder="Last" required>
+                </div>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" placeholder="XXX-XXX-XXXX">
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Type your message ..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+</body>
+</html>

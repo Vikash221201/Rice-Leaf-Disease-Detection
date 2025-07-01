@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='team_member.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Rice Disease Detection</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}"><strong>Home</strong></a></li>
+                <li class="dropdown">
+                    <a href="#dropdown"><strong>Dataset &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="static\dataset-20250307T125636Z-001.zip" download><strong>Dataset 1</strong></a></li>
+                        
+                        <li ><a href="static\train.rar" download><strong>Dataset 2</strong></a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href=""><strong>Models &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="{{ url_for('model_page') }}"><strong>Custom Model</strong></a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('publications') }}"><strong>Publications</strong></a></li>
+                <li><a href=""><strong>Team Members</strong></a></li>
+                <li><a href="{{ url_for('Contact_us') }}"><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Team Section -->
+    <section class="team">
+        <h2>OUR MEMBERS</h2>
+        <p class="subtitle">
+           
+        </p>
+
+        <div class="team-container">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="static\sangbartika.jpg" alt="Team Member 1">
+                <h3>Sangbartika Chanda</h3>
+                <p class="position">Team Leader and Web Developer</p>
+                <p class="description">Managed tasks, oversaw progress, and integrated frontend-backend systems.</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="static\vikash.jpg" alt="Team Member 2">
+                <h3>Vikash Kumar Mistry</h3>
+                <p class="position">Android developer and ML Engineer</p>
+                <p class="description">Handled dataset processing, model training, and TFLite conversion for detection of an image using android and web application.</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="static\rajib.png" alt="Team Member 3">
+                <h3>Rajib Mistri</h3>
+                <p class="position">UI/UX Designer</p>
+                <p class="description">Designed a user-friendly and responsive interface for Android Application.</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <img src="static\sayan.jpg" alt="Team Member 4">
+                <h3>Sayan Banerjee</h3>
+                <p class="position">Backend Developer</p>
+                <p class="description">handles server-side logic, databases, and hosting.</p>
+            </div>
+            <!-- Team Member 5 -->
+            <div class="team-member">
+                <img src="static\ankit.jpg" alt="Team Member 4">
+                <h3>Ankit Bairagi</h3>
+                <p class="position">Documentation Lead</p>
+                <p class="description">Prepared technical reports, research summaries, and project documentation.</p>
+            </div>
+            <!-- Team Member 6 -->
+            <div class="team-member">
+                <img src="static\woman.png" alt="Team Member 4">    <!-- Ei tag e arpita er photo rakh ar static folder ei rakhbi -->
+                <h3>Arpita Roy Karmakar</h3>
+                <p class="position">Testing & Deployment</p>
+                <p class="description">Tested system performance and managed deployment across platforms.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

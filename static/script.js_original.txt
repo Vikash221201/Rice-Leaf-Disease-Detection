@@ -1,0 +1,33 @@
+function captureImage() {
+  alert("Camera capture functionality will be implemented.");
+}
+
+document.getElementById('imageInput').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          document.getElementById('preview').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+  }
+});
+
+function previewImage(event) {
+  var reader = new FileReader();
+  reader.onload = function(){
+      var output = document.getElementById('preview');
+      output.src = reader.result;
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+
+
+function predictDisease() {
+  document.getElementById('loading').style.display = 'block';
+  setTimeout(() => {
+      window.location.href = 'result.html';
+  }, 2000);
+}

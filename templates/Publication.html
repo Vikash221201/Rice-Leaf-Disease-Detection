@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Rice Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Publication.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1>Rice Disease Detection</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}"><strong>Home</strong></a></li>
+                <li class="dropdown">
+                    <a href="#dropdown"><strong>Dataset &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="static\dataset-20250307T125636Z-001.zip" download><strong>Dataset 1</strong></a></li>
+                        
+                        <li ><a href="static\train.rar" download><strong>Dataset 2</strong></a></li>
+                    </ul>    
+                </li>
+                
+                <li class="dropdown">
+                    <a href=""><strong>Models &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="{{ url_for('model_page') }}"><strong>Custom Model</strong></a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href=""><strong>Publications</strong></a></li>
+                <li><a href="{{ url_for('Team_members') }}"><strong>Team Members</strong></a></li>
+                <li><a href="{{ url_for('Contact_us') }}"><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Research Publications</h1>
+        <p>Explore our research on deep learning-based rice disease detection.</p>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section">
+        <h2>Few Research Papers</h2>
+        <div class="publication-grid">
+            <div class="publication-card">
+                <h3>Deep Learning-Based Rice Disease Classification</h3>
+                <p>Published in IEEE Journal, 2024</p>
+                <a href="https://ieeexplore.ieee.org/document/10404154" target="_blank">View PDF</a>
+
+                <!--<a href="paper1.pdf" download>Download PDF</a>-->
+            </div>
+            <div class="publication-card">
+                <h3>Automatic Recognition of Rice Leaf Diseases Using Transfer Learning</h3>
+                <p>Published in MDPI, 2023</p>
+                <a href="https://www.mdpi.com/2073-4395/13/4/961" target="_blank">View PDF</a>
+
+                
+            </div>
+            <div class="publication-card">
+                <h3>Deep learning for rice leaf disease detection: A systematic literature review</h3>
+                <p>Published in the journal Information Processing in Agriculture, 2024</p>
+                <a href="https://www.sciencedirect.com/science/article/pii/S221431732400026X?via%3Dihub" target="_blank">View PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rice Disease Detection. All rights reserved.</p>
+    </footer>
+    
+    <script src="Publication.js"></script>
+
+</body>
+</html>

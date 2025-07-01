@@ -1,0 +1,30 @@
+<main>
+        
+    </header>
+        <img src="G:\Rice_leaf_disease_detection_using_CNN\mridul da analysis\adam0.001copied\perfectly predicting model\rice_disease_ detection_ webpage\Rice disease detection webpage\static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">
+        
+    </main>
+    <header class="hero">
+        <h1>Design and Development of Deep Learning Model for Rice Disease Detection using CNN Architecture</h1>
+    </header>
+
+    <section id="about" class="section about">
+        <h2>About the Project</h2>
+        <br>
+        <p>
+            This project uses Convolutional Neural Networks (CNN) to detect rice leaf diseases. 
+            Early detection of diseases like Bacterial Leaf Blight, Brown Spot, and Smut helps farmers 
+            take preventive measures, improving yield and quality.
+        </p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works">
+        <h2>How It Works</h2>
+        <p>
+            1️⃣ **Upload an Image** of a rice leaf.<br>
+            2️⃣ Our **CNN-based deep learning model** analyzes the image.<br>
+            3️⃣ The system **classifies the disease** and provides recommendations.<br>
+            4️⃣ Farmers can take **preventive measures** based on results.
+        </p>
+    </section>

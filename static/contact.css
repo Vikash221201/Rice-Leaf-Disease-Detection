@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #d5d8db;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh; /* Ensures everything fits in the screen */
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background-color: #333;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f6f7f8;
+    padding: 8px 12px;
+    display: block;
+    font-size: 1em;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    background-color: #919294;
+    color: white;
+    border-radius: 20px;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c4c5c7;
+    border: 1px solid #ccc;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+
+    /*visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;*/
+
+    pointer-events: auto;
+}
+
+/*.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    visibility: visible;
+    opacity: 1;
+}*/
+
+
+.dropdown-content li {
+    padding: 8px;
+    display: block;
+}
+
+.dropdown-content li a {
+    display: block;
+    color: #333;
+}
+
+.dropdown-content li a:hover {
+    background-color: #919294;
+    color: rgb(12, 12, 12);
+    border-radius: 20px;
+}
+
+.nav-menu li:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;  /* Increased width for better spacing */
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.contact-info h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    color: #e65832;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.contact-form {
+    flex: 1.2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;  /* Added horizontal space between First and Last name */
+}
+
+.name-fields input {
+    width: 48%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #e65832;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cc4e2a;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+
+
+
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name-fields input {
+        width: 100%;
+    }
+}

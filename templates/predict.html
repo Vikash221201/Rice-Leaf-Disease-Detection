@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='script.js') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Upload an Image</h2>
+        
+        <!-- Add a form to submit the image to Flask -->
+        <form id="uploadForm" action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="imageInput" accept="image/*" onchange="previewImage(event)" required>
+            <br>
+            <button id="capture">Open Camera</button>
+
+            <!-- Video element for live camera feed -->
+            <video id="video" width="300" height="200" autoplay style="display: none;"></video>
+
+            <!-- Button to capture photo -->
+            <button id="captureImage" style="display: none;">Take Photo</button>
+
+            <!-- Canvas to store the captured image -->
+            <canvas id="canvas" width="300" height="200" style="display: none;"></canvas>
+            <br>
+            <!-- Display uploaded/captured image -->
+            
+            <img id="preview" class="preview" src="static\plant.png" >
+
+            <button type="submit"  id="predict">Predict</button>
+            <button id="home" onclick="window.location.href='/'">Go to Homepage</button>
+            <div id="loading" class="loading"></div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

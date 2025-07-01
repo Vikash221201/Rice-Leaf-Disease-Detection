@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static\rice-logo.jpg" alt="Rice Disease Detection Logo" class="logo">
+            <h1>Rice Disease Detection</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home"><strong>Home</strong></a></li>
+                <li class="dropdown">
+                    <a href="#dropdown"><strong>Dataset &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="static\dataset-20250307T125636Z-001.zip" download><strong>Dataset 1</strong></a></li>
+                        
+                        <li ><a href="static\train.rar" download><strong>Dataset 2</strong></a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href=""><strong>Models &#x25BC;</strong></a>
+                    <ul class="dropdown-content">
+                        <li ><a href="{{ url_for('model_page') }}"><strong>Custom Model</strong></a></li>
+                        <li ><a href="{{ url_for('model_page') }}"><strong>VG-19 Model</strong></a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('publications') }}"><strong>Publications</strong></a></li>
+
+                <li><a href="{{ url_for('Team_members') }}"><strong>Team Members</strong></a></li>
+
+                <li><a href="{{ url_for('Contact_us') }}"><strong>Contact Us</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!--<img src="static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">-->
+
+        <div class="hero">
+            <h1>Design and Development of Deep Learning Model for Rice Disease Detection using CNN Architecture</h1>
+        </div>
+    
+        <!--<img src="static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">-->
+
+        <div class="about-rice">
+            <img src="static\plant_bg_image.jpg" alt="Monument Valley" class="background-image">
+            Rice is one of the most important staple food crops in the world, feeding over half the global population. 
+            It is grown primarily in Asia but is also cultivated in parts of Africa, Latin America, and the U.S. 
+            Rice provides essential calories and nutrients and plays a crucial role in food security.
+        </div>
+
+        <div id="about" class="section about">
+            <h2>About the Project</h2>
+            <p>
+                This project uses Convolutional Neural Networks (CNN) to detect rice leaf diseases. 
+                Early detection of diseases like Bacterial Leaf Blight, Brown Spot, and Smut helps farmers 
+                take preventive measures, improving yield and quality.
+            </p>
+        </div>
+    
+        <div id="how-it-works" class="section how-it-works">
+            <h2>How It Works</h2>
+            <p>
+                1️⃣ **Upload an Image** of a rice leaf.<br>
+                2️⃣ Our **CNN-based deep learning model** analyzes the image.<br>
+                3️⃣ The system **classifies the disease** and provides recommendations.<br>
+                4️⃣ Farmers can take **preventive measures** based on results.
+            </p>
+        </div>
+    </main>
+    
+    <script src="nav.js"></script>
+</body>
+</html>
